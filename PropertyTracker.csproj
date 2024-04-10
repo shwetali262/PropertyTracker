@@ -142,16 +142,18 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\IncomeController.cs" />
     <Compile Include="Controllers\TenantController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\Account\LoginPostData.cs" />
-    <Compile Include="Models\Account\PropertyMaster.cs" />
+    <Compile Include="Models\ViewModels\PropertyMaster.cs" />
     <Compile Include="Models\Account\RegisterPostData.cs" />
-    <Compile Include="Models\Account\Tenants.cs" />
+    <Compile Include="Models\ViewModels\Tenants.cs" />
     <Compile Include="Models\DBConnection\AppDbContext.cs" />
     <Compile Include="Models\DBConnection\UserMaster.cs" />
+    <Compile Include="Models\ViewModels\RentalPaymentInfo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -212,6 +214,8 @@
     <Content Include="Views\Home\EditProperty.cshtml" />
     <Content Include="Views\Tenant\TenantList.cshtml" />
     <Content Include="Views\Tenant\AddTenant.cshtml" />
+    <Content Include="Views\Income\RentalList.cshtml" />
+    <Content Include="Views\Income\PayRent.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

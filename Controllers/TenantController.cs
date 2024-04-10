@@ -27,14 +27,16 @@ namespace PropertyTracker.Controllers
                         SqlDataReader reader = cmd.ExecuteReader();
                         while (reader.Read())
                         {
-                            Tenants tenant = new Tenants();
-                            tenant.Id = Convert.ToInt32(reader["Id"]);
-                            tenant.Name = reader["Name"].ToString();
-                            tenant.Email = reader["Email"].ToString();
-                            tenant.PhoneNo = reader["PhoneNo"].ToString();
-                            tenant.Address = reader["Address"].ToString();
-                            tenant.PropertyId = Convert.ToInt32(reader["PropertyId"]);
-                            tenant.InDate = Convert.ToDateTime(reader["InDate"]);
+                            Tenants tenant = new Tenants
+                            {
+                                Id = Convert.ToInt32(reader["Id"]),
+                                Name = reader["Name"].ToString(),
+                                Email = reader["Email"].ToString(),
+                                PhoneNo = reader["PhoneNo"].ToString(),
+                                Address = reader["Address"].ToString(),
+                                PropertyId = Convert.ToInt32(reader["PropertyId"]),
+                                InDate = Convert.ToDateTime(reader["InDate"])
+                            };
                             list.Add(tenant);
                         }
                     }
